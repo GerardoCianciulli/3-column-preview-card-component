@@ -1,0 +1,31 @@
+/* Desktop first (design width 1440px) */
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-block: 3rem;
+}
+
+.card-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: min(100% - 3rem, 57.5rem); /* 920px */
+  min-height: 31.25rem; /* 500px */
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Mobile (design width 375px) */
+@media (max-width: 56.25rem) {
+  .page {
+    padding-block: 5.5rem; /* 88px */
+  }
+
+  .card-group {
+    grid-template-columns: 1fr;
+    width: min(100% - 3rem, 20.4375rem); /* 327px */
+    min-height: 0;
+  }
+}
